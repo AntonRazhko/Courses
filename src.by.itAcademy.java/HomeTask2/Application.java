@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Application {
     public static void main(String[] args) {
         System.out.println(squareNumbers(5)); //число в квадрате
-        System.out.println(arithmetic(26,32)); //среднее арифмитическое
-        System.out.println(arithmetic(15.22,15.36,13.2854f)); //среднее арифмитическое
+        System.out.println(arithmetic(26,32)); //среднее арифметическое
+        System.out.println(arithmetic(15.22,15.36,13.2854f)); //среднее арифметическое
 
         Random random= new Random();
         System.out.println( random.nextInt(111));
@@ -27,10 +27,10 @@ public class Application {
     public static int squareNumbers(int number1) {   //метод для нахождения квадрата числа
         return number1*number1;
     }
-    public static int arithmetic (int number1,int number2){   //среднее арифмитическое двух  целых чисел
+    public static int arithmetic (int number1,int number2){   //среднее арифметическое двух  целых чисел
         return (number1+number2)/2;
     }
-    public static double arithmetic (double number1, double number2, float number3){ //среднее арифмитическое трех дробных чисел
+    public static double arithmetic (double number1, double number2, float number3){ //среднее арифметическое трех дробных чисел
         return (number1+number2+number3)/3;
     }
 
