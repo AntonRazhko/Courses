@@ -20,7 +20,10 @@ import java.util.Scanner;
                 Random random = new Random();
                 int i = random.nextInt(diff + 1) + min;
                 System.out.println(i);
-                getResult(i);
+                boolean result = getResult(i);
+                if (result) {
+                    System.out.println("Чсло входит в заданный промежуток");
+                } else System.out.println("Число не входит в заданный промежуток");
             } else if (typedNumber == 2) {
                 //Задание 2
                 Scanner sidesTriangle = new Scanner(System.in);
@@ -28,61 +31,53 @@ import java.util.Scanner;
                 double side1 = sidesTriangle.nextDouble();
                 double side2 = sidesTriangle.nextDouble();
                 double side3 = sidesTriangle.nextDouble();
-                getTriangle(side1, side2, side3);
-            } else if (typedNumber==3) {
+                System.out.println(getTriangle(side1, side2, side3));
+            } else if (typedNumber == 3) {
                 //Задание 3
                 Calendar calendar = Calendar.getInstance();
                 int numDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
                 System.out.println(numDayOfWeek);
                 dayOfWeek(numDayOfWeek);
+                System.out.println(dayOfWeek(numDayOfWeek));
             }
         }
-
-
-        public static void getResult(int num) {
-            if (25 < num && num < 100) {
-                System.out.println("Число попадает в заданный интервал");
-            } else {
-                System.out.println("Число не попадает в заданный интервал");
-            }
+        public static boolean getResult(int num) {
+            return (25 < num && num < 100);
         }
 
-        public static void getTriangle(double side1, double side2, double side3) {
-            if (side1 + side2 >= side3) {
-                System.out.println("Треугольник возможен");
-            } else if (side1 + side3 >= side2) {
-                System.out.println("Треугольник возможен");
-            } else if (side2 + side3 >= side1) {
-                System.out.println("Треугольник возможен");
-            } else {
-                System.out.println("Треугольник невозможен");
-            }
+        public static boolean getTriangle(double side1, double side2, double side3) {
+            boolean getTriangle = true;
+            if (side1 + side2 >= side3 || side1 + side3 >= side2 || side2 + side3 >= side1) {getTriangle = true;
+            } else getTriangle = false;
+            return getTriangle;
         }
-        public static void dayOfWeek(int day) {
+
+        public static String dayOfWeek(int day) {
+            String dayOfWeek = null;
             switch (day) {
                 case 1:
-                    System.out.println("Sunday");
+                    dayOfWeek = "Sunday";
                     break;
                 case 2:
-                    System.out.println("Monday");
+                    dayOfWeek = "Monday";
                     break;
                 case 3:
-                    System.out.println("Tuesday");
+                    dayOfWeek = "Tuesday";
                     break;
                 case 4:
-                    System.out.println("Wednesday");
+                    dayOfWeek = "Wednesday";
                     break;
                 case 5:
-                    System.out.println("Thursday");
+                    dayOfWeek = "Thursday";
                     break;
                 case 6:
-                    System.out.println("Friday");
+                    dayOfWeek = "Friday";
                     break;
                 case 7:
-                    System.out.println("Saturday");
+                    dayOfWeek = "Saturday";
+                    break;
             }
-
+            return dayOfWeek;
         }
+
     }
-
-
