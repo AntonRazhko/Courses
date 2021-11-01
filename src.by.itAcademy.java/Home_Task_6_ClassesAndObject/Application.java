@@ -89,7 +89,7 @@ public class Application {
         System.out.println();
         System.out.println("Введите столбец для вывода");
         int column = scanner.nextInt();
-        for (int i = 0; i < array[column].length; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.println(array[i][column]);
         }
     } //Задание 2
