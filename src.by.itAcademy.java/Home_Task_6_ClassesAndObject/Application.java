@@ -10,14 +10,25 @@ public class Application {
         System.out.println();
         printNumbers(array);
         // Задание 2
-        int[][] array2D = get2DArray();
+        System.out.println("Введите размер матрицы");
+        Scanner sizeArray = new Scanner(System.in);
+        int amountString = sizeArray.nextInt();
+        int amountColumn = sizeArray.nextInt();
+        int[][] array2D = get2DArray(amountString,amountColumn);
         print2DArray(array2D);
-        printStringAndColumn(array2D);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите строку для вывода на экран");
+        int line = scanner.nextInt();System.out.println();
+        System.out.println("Введите столбец для вывода");
+        int column = scanner.nextInt();
+        printStringAndColumn(array2D,line,column);
 
         //Задание 3
         Children children1 = new Children("Смирнова", "Дарья", 6);
         Children children2 = new Children();
-        children2.setParameters();
+        children2.setSurname("Иванова");
+        children2.setName("Екатерина");
+        children2.setAge(5);
 
         children1.printChildren();
         children2.printChildren();
@@ -55,11 +66,7 @@ public class Application {
         }
     } // Задание 1
 
-    public static int[][] get2DArray() {
-        System.out.println("Введите размер матрицы");
-        Scanner sizeArray = new Scanner(System.in);
-        int string = sizeArray.nextInt();
-        int column = sizeArray.nextInt();
+    public static int[][] get2DArray(int string,int column ) {
         int[][] array = new int[string][column];
         for (int i = 0; i < string; i++) {
             for (int j = 0; j < column; j++) {
@@ -79,16 +86,12 @@ public class Application {
         }
     } //Задание 2
 
-    public static void printStringAndColumn(int[][] array) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите строку для вывода на экран");
-        int string = scanner.nextInt();
-        for (int j = 0; j < array[string].length; j++) {
-            System.out.print(" " + array[string][j] + " ");
+    public static void printStringAndColumn(int[][] array,int line,int column) {
+
+        for (int j = 0; j < array[line].length; j++) {
+            System.out.print(" " + array[line][j] + " ");
         }
-        System.out.println();
-        System.out.println("Введите столбец для вывода");
-        int column = scanner.nextInt();
+
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i][column]);
         }
@@ -96,7 +99,7 @@ public class Application {
 
     public static void printUserNameWithCardOn1(Customers[] customers) {
         for (int i = 0; i < customers.length; i++) {
-            if (customers[i].getNumber_card() % 10 == 1) {
+            if (customers[i].getNumberCard() % 10 == 1) {
                 System.out.println(customers[i].getName());
             }
         }

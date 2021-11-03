@@ -19,15 +19,14 @@ public class Children {
         age = ages;
     }
 
-    public void setParameters() {
-        System.out.println("Введите данные пользователя");
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Фамилия");
-        surname=scanner.nextLine();
-        System.out.println("Имя");
-        name=scanner.nextLine();
-        System.out.println("Возраст");
-        age=scanner.nextInt();
+   public void setSurname(String surnames){
+        surname=surnames;
+    }
+    public void setName(String names){
+        name=names;
+    }
+    public void setAge(int ages){
+        age=ages;
     }
 
     public void printChildren() {

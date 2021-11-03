@@ -3,10 +3,10 @@ package Home_Task_6_ClassesAndObject;
 public class Customers {
     private String surname;
     private String name;
-    private String middle_name;
-    private int year_of_birth;
-    private int number_card;
-    private int number_account;
+    private String middleName;
+    private int yearOfBirth;
+    private int numberCard;
+    private int numberAccount;
 
     public Customers() {
     }
@@ -14,10 +14,10 @@ public class Customers {
     public Customers(String surnames, String names, String middle_names, int year_of_births, int number_cards, int number_accounts) {
         surname = surnames;
         name = names;
-        middle_name = middle_names;
-        year_of_birth = year_of_births;
-        number_card = number_cards;
-        number_account = number_accounts;
+        middleName = middle_names;
+        yearOfBirth = year_of_births;
+        numberCard = number_cards;
+        numberAccount = number_accounts;
     }
 
     public void setSurname(String userSurname) {
@@ -36,43 +36,43 @@ public class Customers {
         return name;
     }
 
-    public void setMiddle_name(String userMiddle_surname) {
-        middle_name = userMiddle_surname;
+    public void setMiddleName(String userMiddle_surname) {
+        middleName = userMiddle_surname;
     }
 
-    public String getMiddle_name() {
-        return middle_name;
+    public String getMiddleName() {
+        return middleName;
     }
 
-    public void setYear_of_birth(int userYear_of_birth) {
-        year_of_birth = userYear_of_birth;
+    public void setYearOfBirth(int userYear_of_birth) {
+        yearOfBirth = userYear_of_birth;
     }
 
-    public int getYear_of_birth() {
-        return year_of_birth;
+    public int getYearOfBirth() {
+        return yearOfBirth;
     }
 
-    public void setNumber_card(int userNumber_card) {
-        number_card = userNumber_card;
+    public void setNumberCard(int userNumber_card) {
+        numberCard = userNumber_card;
     }
 
-    public int getNumber_card() {
-        return number_card;
+    public int getNumberCard() {
+        return numberCard;
     }
 
-    public void setNumber_account(int userNumber_account) {
-        number_account = userNumber_account;
+    public void setNumberAccount(int userNumber_account) {
+        numberAccount = userNumber_account;
     }
 
-    public int getNumber_account() {
-        return number_account;
+    public int getNumberAccount() {
+        return numberAccount;
     }
-    public int getAge(int year_of_birth){
-        int age =2021-year_of_birth;
+    public int getAge(int yearOfBirthbirth){
+        int age =2021-yearOfBirth;
         return age;
     }
     public void printUserParameters(){
-        System.out.println(getSurname()+" "+getName()+" "+getMiddle_name()+" ,№ карты "+getNumber_card()+" ,№ счета "+getNumber_account()+" ,возраст "+getAge(getYear_of_birth())+" лет");
+        System.out.println(getSurname()+" "+getName()+" "+ getMiddleName()+" ,№ карты "+ getNumberCard()+" ,№ счета "+ getNumberAccount()+" ,возраст "+getAge(getYearOfBirth())+" лет");
     }
 }
 
