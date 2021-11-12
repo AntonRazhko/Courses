@@ -14,8 +14,6 @@ public class Triangle extends Figure {
     public Triangle() {
     }
 
-    ;
-
     public double getSideA() {
         return sideA;
     }

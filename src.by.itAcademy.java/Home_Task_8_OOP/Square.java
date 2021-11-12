@@ -4,7 +4,7 @@ public class Square extends Figure {
     private double sideSquare;
 
     public Square(double side) {
-        sideSquare = sideSquare;
+        sideSquare = side;
     }
 
     public Square() {
