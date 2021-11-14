@@ -4,12 +4,13 @@ public class Engineers extends Employees implements Salary {
     private int countHoursInMonth;
     private int priceOfHour;
 
-    public Engineers(int countHoursInMonth, int priceOfHours) {
+    public Engineers(String profession,String name,int countHoursInMonth, int priceOfHours) {
+        super(name,profession);
         this.countHoursInMonth = countHoursInMonth;
         this.priceOfHour = priceOfHours;
     }
-
-    public Engineers() {
+    public void leadWorkers(){
+        System.out.println("Инженер руководит бригадой рабочих");
     }
 
     @Override

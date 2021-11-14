@@ -4,12 +4,10 @@ public class Workers extends Employees implements Salary {
     private int countProducts;
     private int priceOfProduct;
 
-    public Workers(int countProduct, int priceOfProduct) {
+    public Workers(String profession,String name,int countProduct, int priceOfProduct) {
+        super(profession,name);
         this.countProducts = countProduct;
         this.priceOfProduct = priceOfProduct;
-    }
-
-    public Workers() {
     }
 
     @Override

@@ -5,14 +5,13 @@ public class Managers extends Employees implements Salary {
     private int priceOfHour;
     private int sizePremium;
 
-    public Managers(int countHoursInMonth, int priceOfHours, int sizePremium) {
+    public Managers(String profession,String name,int countHoursInMonth, int priceOfHours, int sizePremium) {
+        super(profession,name);
         this.countHoursInMonth = countHoursInMonth;
         this.priceOfHour = priceOfHours;
         this.sizePremium = sizePremium;
     }
 
-    public Managers() {
-    }
 
     @Override
     public void work() {
@@ -21,7 +20,7 @@ public class Managers extends Employees implements Salary {
 
     @Override
     public int getSalary() {
-        return countHoursInMonth * priceOfHour + sizePremium;
+        return (countHoursInMonth * priceOfHour) +(countHoursInMonth * priceOfHour) * sizePremium/100;
     }
 
     public int getCountHoursInMonth() {
