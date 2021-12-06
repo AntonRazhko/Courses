@@ -47,24 +47,16 @@ public class Application {
             System.out.println(removeEvenLength(list));
         }
         public static void printKey (Map < String, Pet > pets){        //метод к заданию 1
-            for (Map.Entry<String, Pet> entry : pets.entrySet()) {
-                System.out.println(entry.getKey());
-            }
+            System.out.println(pets.keySet());
+
         }
-        public static boolean getMatches (Map < String, String > people){ // метод к заданию2
-            for (Map.Entry<String, String> i : people.entrySet()) {
-                String surname = i.getValue();
-                int num = 0;
-                for (Map.Entry<String, String> j : people.entrySet()) {
-                    String surname1 = j.getValue();
-                    if (surname == surname1) {
-                        num++;
-                    } else if (num > 1) {
-                        return false;
-                    }
-                }
-            }
+        }
+    public static boolean getMatches (Map < String, String > people) { // метод к заданию2
+        HashSet<String> set = new HashSet<>(people.values());
+        if (people.size()== set.size()){
             return true;
+        }
+        return false;
         }
         public static int countCommon (Set < Integer > list1, Set < Integer > list2){
             Set<Integer> intersection = new HashSet<>(list1);
@@ -83,7 +75,6 @@ public class Application {
             }
             return list2;
         }
+ }
 
-    }
-}
 
