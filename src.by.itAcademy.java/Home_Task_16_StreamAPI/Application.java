@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class Application {
     public static void main(String[] args) {
         //Task 1
-        System.out.println(getMath("JDSHJAHA", s -> s.startsWith("J") || s.startsWith("N") && s.endsWith("A")));
+        System.out.println(getMath("JAVA", s -> s.startsWith("J") || s.startsWith("N") && s.endsWith("A")));
         //Task2
         List<Book> library = new ArrayList<>();
         library.add(new Book("Мастер и Маргарита", 1920));
