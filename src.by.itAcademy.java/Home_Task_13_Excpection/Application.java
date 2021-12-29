@@ -15,17 +15,17 @@ public class Application {
         usersShop.put("User4", "12345");
         usersShop.put("User5", "Day5");
 // Регистрация пользователя, проверка пароля на соответствие условиям регистрации
-        Scanner UserData = new Scanner(System.in);
+        Scanner userData = new Scanner(System.in);
         System.out.println("Введите логин и пароль для регистрации");
-        String login = UserData.nextLine();
-        String password = UserData.nextLine();
+        String login = userData.nextLine();
+        String password = userData.nextLine();
         if (!password.matches("(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{8,20}")) {
             throw new WrongPasswordException("Пароль не соответствует требованиям");
         }
         usersShop.put(login, password);
         //Аутентификация пользователя
-        String loginIn = UserData.nextLine();
-        String passwordIn = UserData.nextLine();
+        String loginIn = userData.nextLine();
+        String passwordIn = userData.nextLine();
         if (usersShop.containsKey(loginIn) && usersShop.get(loginIn).equals(passwordIn)) {
             System.out.println("Вы прошли аутенцфикацию");
         } else {
