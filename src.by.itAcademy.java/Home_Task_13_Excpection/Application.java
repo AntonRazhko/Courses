@@ -26,9 +26,10 @@ public class Application {
         //Аутентификация пользователя
         String loginIn = UserData.nextLine();
         String passwordIn = UserData.nextLine();
-        if (!usersShop.containsKey(loginIn) | !usersShop.containsValue(passwordIn)) {
+        if (usersShop.containsKey(loginIn) && usersShop.get(loginIn).equals(passwordIn)) {
+            System.out.println("Вы прошли аутенцфикацию");
+        } else {
             throw new ErrorAuthentication("Пользователя с такими данными не существует");
         }
-        System.out.println("Вы прошли аутенцфикацию");
     }
 }
