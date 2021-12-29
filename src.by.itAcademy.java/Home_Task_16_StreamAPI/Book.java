@@ -1,36 +1,35 @@
 package Home_Task_16_StreamAPI;
 
 public class Book {
-    public String nameOfTheBook;
-    public Integer yearOfIssue;
+    private String name;
+    private Integer year;
 
-    public String getNameOfTheBook() {
-        return nameOfTheBook;
+    public Book(String name, Integer year) {
+        this.name = name;
+        this.year = year;
     }
 
-    public void setNameOfTheBook(String nameOfTheBook) {
-        this.nameOfTheBook = nameOfTheBook;
+    public String getName() {
+        return name;
     }
 
-    public Integer getYearOfIssue() {
-        return yearOfIssue;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setYearOfIssue(Integer yearOfIssue) {
-        this.yearOfIssue = yearOfIssue;
+    public Integer getYear() {
+        return year;
     }
 
-    public Book(String nameOfTheBook, Integer yearOfIssue) {
-        this.nameOfTheBook = nameOfTheBook;
-        this.yearOfIssue = yearOfIssue;
-
+    public void setYear(Integer year) {
+        this.year = year;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "nameOfTheBook='" + nameOfTheBook + '\'' +
-                ", yearOfIssue=" + yearOfIssue +
+                "name='" + name + '\'' +
+                ", year=" + year +
                 '}';
     }
 }
