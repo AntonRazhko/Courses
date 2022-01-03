@@ -1,22 +1,16 @@
 package Home_Tasl_11_Collection;
 
-public class Student{
+public class Student {
     private String name;
     private String group;
     private int course;
-    private int [] grade;
+    private int[] grade;
 
     public Student(String name, String group, int course, int[] grade) {
         this.name = name;
         this.group = group;
         this.course = course;
         this.grade = grade;
-    }
-    public double getAverageGrade(int [] grade){
-        int sum=0;
-        for (int i: grade)
-        {sum+=i;
-        }return (double) sum/grade.length;
     }
 
     public String getName() {
@@ -49,5 +43,13 @@ public class Student{
 
     public void setGrade(int[] grade) {
         this.grade = grade;
+    }
+
+    public double getAverageGrade(int[] grade) {
+        int sum = 0;
+        for (int i : grade) {
+            sum += i;
+        }
+        return (double) sum / grade.length;
     }
 }

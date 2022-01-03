@@ -13,7 +13,7 @@ public class Application {
         Student student4 = new Student("Sidorovich Alexandr", "Engineers", 1, new int[]{1, 2, 3, 1});
 
 
-        ArrayList<Student> students = new ArrayList<>();
+        List<Student> students = new ArrayList<>();
         students.add(student1);
         students.add(student2);
         students.add(student3);
@@ -24,7 +24,7 @@ public class Application {
         deleteStudent(students);
     }
 
-    static void printStudentsCourse(ArrayList<Student> students, int course) {
+    static void printStudentsCourse(List<Student> students, int course) {
         Iterator<Student> iterator = students.listIterator();
         while (iterator.hasNext()) {
             Student student = iterator.next();
@@ -34,17 +34,18 @@ public class Application {
         }
     }
 
-    static void printPlusCourse(ArrayList<Student> students) {
+    static void printPlusCourse(List<Student> students) {
         Iterator<Student> iterator = students.listIterator();
         while (iterator.hasNext()) {
             Student student = iterator.next();
             if (student.getAverageGrade(student.getGrade()) > 3) {
                 student.setCourse(student.getCourse() + 1);
-                System.out.println("Студенты переведенные на следующий курс " + student.getName() +" "+ student.getCourse());
+                System.out.println("Студенты переведенные на следующий курс " + student.getName() + " " + student.getCourse());
             }
         }
     }
-    static void deleteStudent(ArrayList<Student> students) {
+
+    static void deleteStudent(List<Student> students) {
         Iterator<Student> iterator = students.listIterator();
         while (iterator.hasNext()) {
             Student student = iterator.next();
